@@ -1,0 +1,16 @@
+
+Important Links:
+
+(1) Tango With Django course chapters:
+
+http://www.tangowithdjango.com/book17/chapters/login.html
+
+http://www.tangowithdjango.com/book17/chapters/login_redux.html
+
+(2) django-registration-redux - Enhanced User/Registration module/application:
+
+pip install django-registration-redux
+
+Link:
+
+https://django-registration-redux.readthedocs.io/en/latest/
