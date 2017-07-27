@@ -2,7 +2,7 @@
 Project repositories for "Tango With Django" based video tutorial (Youtube)
 
 
-Assuming you have "youtube5workspace" workspace on your computer.
+Assuming you have "youtube-tangowithdjango" workspace on your computer.
 
 To run each of the "??????-tango-with-django-project" inside of this Eclipse workspace, please follow the steps exactly:
 
