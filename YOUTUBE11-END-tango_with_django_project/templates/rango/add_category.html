@@ -1,0 +1,11 @@
+{% extends 'rango/base.html' %}
+{% block title %}Rango - Add Course{% endblock %}
+{% block body_block %}
+   	<h1>Add a category</h1>
+       <form id="category_form" method="post" action="/rango/add_category/">
+           {% csrf_token %}
+           {{ form.as_p }}
+           <br/>
+           <input type="submit" name="submit" value="Create Category" />
+       </form>
+{% endblock %}

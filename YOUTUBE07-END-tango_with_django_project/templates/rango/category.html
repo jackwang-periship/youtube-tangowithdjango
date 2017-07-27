@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% load staticfiles %} <!-- New line -->
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Rango</title>
+</head>
+<body>
+      {% if category %}
+      <h1>{{ category_name }}</h1>
+          {% if course %}
+          <ul>
+              {% for c in course %}
+              <li><a href="{{ c.url }}">{{ c.title }}</a></li>
+              {% endfor %}
+          </ul>
+          {% else %}
+              <strong>No pages currently in category.</strong>
+          {% endif %}
+      {% else %}
+          The specified category {{ category_name }} does not exist!
+      {% endif %}
+    <br/>
+	<a href="/rango/">Back to home page</a>
+	<br/>
+	<a href="/rango/about/">About</a><br />
+	<img src="{% static "images/logo.jpg" %}" alt="Picture of Rango" /> <!-- New line -->
+
+</body>
+</html>

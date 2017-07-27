@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{% load staticfiles %} <!-- New line -->
+<html>
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>{% block title %}Rango{% endblock %}</title>
+	</head>
+<body>
+	{% block content %}{% endblock %}
+	{% block footer %}{% endblock %}
+	{% block local_script %}
+		<br/>
+		<a href="/rango/about/">About</a><br />
+		<img src="{% static "images/avlogo.jpg" %}" alt="Picture of Rango" /> <!-- New line -->
+	{% endblock %}
+</body>
+</html>

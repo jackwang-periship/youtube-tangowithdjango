@@ -1,0 +1,15 @@
+{% extends 'rango/base.html' %}
+
+{% block title %}Rango - Add categories{% endblock %}
+
+{% block content %}
+	<h1>Add a Category</h1>
+    <form id="category_form" method="post" action="/rango/add_category/">
+         {% csrf_token %}
+         {{ form.as_p }}
+         <br/>
+         <input type="submit" name="submit" value="Create Category" />
+    </form>
+	<br/>
+	<a href="/rango/">Back to home page</a>
+{% endblock %}

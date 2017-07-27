@@ -1,0 +1,86 @@
+'''
+Created on Jul 18, 2017
+
+@author: jwang02
+'''
+import os
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'tango_with_django_project.settings')
+
+import datetime
+now = datetime.datetime.now()
+
+import django
+django.setup()
+
+from rango.models import Category, Course
+
+
+def populate():
+    python_cat = add_cat('Python')
+
+    add_page(cat=python_cat,
+        title = "Official Python Tutorial",
+        url = "http://docs.python.org/2/tutorial/",
+        sd = now.strftime("%Y-%m-%d"))
+
+    add_page(cat=python_cat,
+        title="How to Think like a Computer Scientist",
+        url="http://www.greenteapress.com/thinkpython/",
+        sd = now.strftime("%Y-%m-%d"))
+
+    add_page(cat=python_cat,
+        title="Learn Python in 10 Minutes",
+        url="http://www.korokithakis.net/tutorials/python/",
+        sd = now.strftime("%Y-%m-%d"))
+
+    django_cat = add_cat("Django")
+
+    add_page(cat=django_cat,
+        title="Official Django Tutorial",
+        url="https://docs.djangoproject.com/en/1.5/intro/tutorial01/",
+        sd = now.strftime("%Y-%m-%d"))
+
+    add_page(cat=django_cat,
+        title="Django Rocks",
+        url="http://www.djangorocks.com/",
+        sd = now.strftime("%Y-%m-%d"))
+
+    add_page(cat=django_cat,
+        title="How to Tango with Django",
+        url="http://www.tangowithdjango.com/",
+        sd = now.strftime("%Y-%m-%d"))
+
+    frame_cat = add_cat("Other Frameworks")
+
+    add_page(cat=frame_cat,
+        title="Bottle",
+        url="http://bottlepy.org/docs/dev/",
+        sd = now.strftime("%Y-%m-%d"))
+
+    add_page(cat=frame_cat,
+        title="Flask",
+        url="http://flask.pocoo.org",
+        sd = now.strftime("%Y-%m-%d"))
+
+    # Print out what we have added to the user.
+    for c in Category.objects.all():
+        for p in Course.objects.filter(category=c):
+            print("- {0} - {1}".format(str(c), str(p)))
+
+def add_page(cat, title, url, sd, views=0):
+    p = Course.objects.get_or_create(category=cat, title=title)[0]
+    p.url=url
+    p.startingdate=sd
+    p.views=views
+    p.save()
+    return p
+
+def add_cat(name):
+    c = Category.objects.get_or_create(name=name)[0]
+    return c
+
+# Start execution here!
+if __name__ == '__main__':
+    print("Starting Rango population script...")
+    populate()
+    

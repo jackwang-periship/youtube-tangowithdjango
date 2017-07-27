@@ -1,0 +1,17 @@
+{% if cats %}
+    <ul class="nav nav-sidebar">
+    <b>Course Categories</b>
+    <br/>
+    {% for c in cats %}
+        	<li> 
+            <a href="{% url 'category'  c.slug %}">{{ c.name }}</a>
+       	</li>
+    {% endfor %}
+{% else %}
+    	<li> <strong >There are no category present.</strong></li>
+    </ul>
+{% endif %}
+<br/>
+<p>
+	<a href="/rango/add_category/">Add a New Category</a><br />
+</p>

@@ -1,0 +1,17 @@
+The basic steps involved in creating a form and allowing users to enter data via the form is as follows.
+
+(1) If you haven’t already got one, create a forms.py file within your Django application’s directory. 
+This is to store form-related classes.
+
+(2) Create a ModelForm class for each model that you wish to represent as a form.
+(3) Customise the forms as you desire.
+(4) Create or update a view to handle the form - including displaying the form, 
+saving the form data, and flagging up errors which may occur when the user enters incorrect data 
+(or no data at all) in the form.
+(5) Create or update a template to display the form.
+(6) Add a urlpattern to map to the new view (if you created a new one).
+
+This workflow is a bit more complicated than previous workflows, 
+and the views that we have to construct have a lot more complexity as well. 
+However, once you undertake the process a few times it will be pretty clear how everything pieces together.
+

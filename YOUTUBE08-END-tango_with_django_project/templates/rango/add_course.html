@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+    <form id="course_form" method="post" action="/rango/category/{{category.slug}}/add_course/">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <br/>
+        <input type="submit" name="submit" value="Create Course" />
+    </form>
+</body>
+</html>

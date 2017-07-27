@@ -1,0 +1,5 @@
+
+https://scotch.io/tutorials/understanding-the-bootstrap-3-grid-system
+
+http://getbootstrap.com/customize/#grid-system
+

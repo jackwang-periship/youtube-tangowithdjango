@@ -1,0 +1,26 @@
+{% extends 'rango/base.html' %}
+{% block title %}Rango - Add Category{% endblock %}
+{% block body_block %}
+   	<h1>Add a course</h1>
+    <form id="course_form" method="post" action="/rango/category/{{category.slug}}/add_course/">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <br/>
+        <input type="submit" name="submit" value="Create Course" />
+    </form>
+{% endblock %}
+{% block local_script %}
+  	<script>
+    	$(document).ready(function() {
+        	$('.datepicker').datepicker(
+            	{
+                	format: "mm/dd/yyyy",
+                	todayBtn: "linked",
+                	autoclose: true,
+                	todayHighlight: true
+            	}
+        	);
+ 
+    	});
+  	</script>
+{% endblock %}
