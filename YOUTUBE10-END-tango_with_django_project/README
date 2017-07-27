@@ -1,0 +1,26 @@
+Using Bootstrap to style the website.
+
+Download project source code repository at:
+
+https://github.com/playdoh888/youtube-tangowithdjango
+
+Important Links:
+
+(1) Based on the course materials on "Tango with Django 1.7". See this URL for detail:
+
+http://www.tangowithdjango.com/book17/chapters/bootstrap.html
+
+(2) Bootstrap and its "Dashboard" example:
+
+http://getbootstrap.com/getting-started/
+
+https://www.taniarascia.com/what-is-bootstrap-and-how-do-i-use-it/
+
+https://getbootstrap.com/examples/dashboard/#
+
+(3) Django Custom template tags:
+
+http://www.tangowithdjango.com/book17/chapters/template_tags.html
+
+Official Document:
+https://docs.djangoproject.com/en/1.10/howto/custom-template-tags/
