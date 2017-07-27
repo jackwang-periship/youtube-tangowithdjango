@@ -1,13 +1,14 @@
+
 Here are some useful links to help understand "Django Templates"
 
 (1) Tango with Django course - Chapter 10:
 
-http://www.tangowithdjango.com/book17...
+http://www.tangowithdjango.com/book17/chapters/templates.html
 
 (2) Official Document:
 
-https://docs.djangoproject.com/en/1.1...
+https://docs.djangoproject.com/en/1.10/topics/templates/
 
 (3) Good tutorial:
 
-https://tutorial.djangogirls.org/en/d...
+https://tutorial.djangogirls.org/en/django_templates/
